@@ -1,0 +1,253 @@
+.login-box {
+  position: relative;
+  top: 300px;
+  background-color: #CCC;
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  height: 300px;
+  border-radius: 10px;
+  -webkit-animation-name: lift, idle;
+          animation-name: lift, idle;
+  -webkit-animation-duration: 1s, 5s;
+          animation-duration: 1s, 5s;
+  -webkit-animation-delay: 0s, 1s;
+          animation-delay: 0s, 1s;
+  -webkit-animation-iteration-count: 1, infinite;
+          animation-iteration-count: 1, infinite;
+  /* box-shadow: 0px 100px 60px -40px #888; */
+  z-index: 0;
+  opacity: 0.75;
+}
+
+.shadow {
+  margin-top: -300px;
+  -webkit-animation-name: lift-shadow, idle-shadow;
+          animation-name: lift-shadow, idle-shadow;
+  -webkit-animation-duration: 1s, 5s;
+          animation-duration: 1s, 5s;
+  -webkit-animation-delay: 0s, 1s;
+          animation-delay: 0s, 1s;
+  -webkit-animation-iteration-count: 1, infinite;
+          animation-iteration-count: 1, infinite;
+  z-index: -1;
+  top: 410px;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+  width: 520px;
+  height: 300px;
+  background-color: #999;
+  opacity: 1;
+}
+
+@-webkit-keyframes lift {
+  0% {
+    top: 400px;
+  }
+  100% {
+    top: 300px;
+  }
+}
+
+@keyframes lift {
+  0% {
+    top: 400px;
+  }
+  100% {
+    top: 300px;
+  }
+}
+
+@-webkit-keyframes lift-shadow {
+  0% {
+    top: 400px;
+    background-color: #CCC;
+    width: 500px;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  25% {
+    background-color: #777;
+  }
+  100% {
+    top: 400px;
+    background-color: #999;
+    width: 520px;
+  }
+}
+
+@keyframes lift-shadow {
+  0% {
+    top: 400px;
+    background-color: #CCC;
+    width: 500px;
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  25% {
+    background-color: #777;
+  }
+  100% {
+    top: 400px;
+    background-color: #999;
+    width: 520px;
+  }
+}
+
+@-webkit-keyframes idle {
+  0% {
+    top: 300px;
+  }
+  50% {
+    top: 310px;
+  }
+  100% {
+    top: 300px;
+  }
+}
+
+@keyframes idle {
+  0% {
+    top: 300px;
+  }
+  50% {
+    top: 310px;
+  }
+  100% {
+    top: 300px;
+  }
+}
+
+@-webkit-keyframes idle-shadow {
+  0% {
+    top: 400px;
+    background-color: #999;
+    width: 520px;
+  }
+  50% {
+    top: 400px;
+    background-color: #888;
+    width: 500px;
+  }
+  100% {
+    top: 400px;
+    background-color: #999;
+    width: 520px;
+  }
+}
+
+@keyframes idle-shadow {
+  0% {
+    top: 400px;
+    background-color: #999;
+    width: 520px;
+  }
+  50% {
+    top: 400px;
+    background-color: #888;
+    width: 500px;
+  }
+  100% {
+    top: 400px;
+    background-color: #999;
+    width: 520px;
+  }
+}
+
+body {
+  background-color: #EEE;
+}
+
+.login-header {
+  font-family: Arial;
+  padding: 20px;
+  -webkit-transform: scale(1.1, 1);
+          transform: scale(1.1, 1);
+}
+
+.login-input-text {
+  margin: 0px 10px;
+  background-color: #CCC;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  border: 1px solid #555;
+  border-radius: 2px;
+  -webkit-transform: scale(1.1, 1);
+          transform: scale(1.1, 1);
+}
+
+::-webkit-input-placeholder {
+  color: #333333;
+  opacity: 0.5;
+  font-size: small;
+}
+
+:-ms-input-placeholder {
+  color: #333333;
+  opacity: 0.5;
+  font-size: small;
+}
+
+::-ms-input-placeholder {
+  color: #333333;
+  opacity: 0.5;
+  font-size: small;
+}
+
+::placeholder {
+  color: #333333;
+  opacity: 0.5;
+  font-size: small;
+}
+
+.input-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0px 10px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-label {
+  width: 100px;
+}
+
+.embossed-text {
+  color: #555;
+}
+
+.custom-button {
+  background-color: #4888ff;
+  padding: 10px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: bold;
+  color: #CCC;
+  -webkit-transform: scale(1.1, 1);
+          transform: scale(1.1, 1);
+}
+
+.custom-button:hover {
+  background-color: #357cff;
+}
+
+input {
+  all: unset;
+}
+
+.no-select {
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+/*# sourceMappingURL=style.css.map */
