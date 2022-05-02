@@ -1,0 +1,126 @@
+$ball-radius: 300px;
+$num-rotations: 5;
+$bgc: #FFF;
+
+body {
+  background-color: $bgc;
+}
+
+.screendiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.applescreen {
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 70%;
+  height: 90%;
+  background-color: $bgc;
+  border-radius: 15px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.ball {
+  position: absolute;
+  width: $ball-radius;
+  height: $ball-radius;
+  border-radius: $ball-radius;
+  z-index: -1;
+  filter: blur(300px);
+  opacity: .75;
+}
+
+.clockwise1 {
+  animation: move-ball 100s linear 0s infinite reverse both;
+  animation-delay: 0s;
+}
+
+.clockwise2 {
+  animation: move-ball 100s linear 0s infinite both;
+  animation-delay: -50s;
+}
+
+.clockwise3 {
+  animation: move-ball 100s linear 0s infinite both;
+  animation-delay: -25s;
+}
+
+.clockwise3 {
+  animation: move-ball 100s linear 0s infinite both;
+  animation-delay: -70s;
+}
+
+.clockwise4 {
+  animation: move-ball 100s linear 0s infinite both;
+  animation-delay: -35s;
+}
+
+.red {
+  background-color: #247881;
+}
+
+.blue {
+  background-color: #43919B;
+}
+
+.yellow {
+  background-color: #30AADD;
+}
+
+.purple {
+  background-color: #00FFC6;
+}
+
+@keyframes move-ball {
+  0% {
+    transform: rotate(0deg) translate(300px);
+  }
+
+  50% {
+    transform: rotate(180deg+(360deg*$num-rotations)) translate(0px, 1000px);
+  }
+
+  100% {
+    transform: rotate(0deg) translate(300px);
+  }
+}
+
+@keyframes typewriter {
+  from{width: 0;}
+  to{width: 730px;}
+}
+
+
+.title {
+  position: absolute;
+  font-size: 50px;
+  color: black;
+  z-index: 2;
+  font-family:'Corbel Light', Tahoma, Geneva, Verdana, sans-serif;
+  filter: blur(0px);
+  opacity: 1;
+  transition: filter 5s, opacity 6s;
+}
+
+.title:hover {
+  filter: blur(100px);
+  opacity: 0;
+  transition: filter 5s, opacity 2s;
+}
+
+.no-select{
+  -ms-user-select:none;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+   user-select:none;
+}
